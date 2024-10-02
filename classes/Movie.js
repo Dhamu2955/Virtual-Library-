@@ -15,6 +15,12 @@ class Movie extends Media {
         temp.sort((a,b) => b.duration - a.duration)
         return temp[0]
     }
+    static calculateAverageRating(movies) {
+        let x = 0
+        for (let i = 0; i < movies.length; i++){
+            x += movies[i].rating
+        } return x / movies.length
+    }
 }
 
 // don't change below
